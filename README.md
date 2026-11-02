@@ -1,58 +1,84 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Kenneth Avila — Portfolio
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A personal portfolio for Kenneth Avila, a full-stack software engineer. The site presents professional experience, skills, selected projects, contact information, and a downloadable résumé.
 
-## About Laravel
+## Built with
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Laravel 13
+- Inertia.js 2
+- React 18
+- Vite
+- Tailwind CSS
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Responsive single-page portfolio with About, Skills, Experience, Projects, and Contact sections
+- Light and dark themes
+- Scroll reveal effects and a back-to-top button
+- Project previews with links to live demos and source repositories
+- Downloadable résumé at `/resume/download`
 
-## Learning Laravel
+## Featured projects
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Project | Description | Demo | Repository |
+| --- | --- | --- | --- |
+| [DRMS — Digital Records Management System](https://github.com/knnthcstrvl/drms-demo) | Registrar records retrieval system for Manila Central University | [Live demo](https://drms-demo.onrender.com/login) | [GitHub](https://github.com/knnthcstrvl/drms-demo) |
+| [BoardRoom](https://github.com/knnthcstrvl/boardroom-demo) | Company space reservation system with a tablet kiosk and admin panel | [Live demo](https://boardroom-demo.onrender.com/kiosk) | [GitHub](https://github.com/knnthcstrvl/boardroom-demo) |
+| [ETRS — Electronic Time Record System](https://github.com/knnthcstrvl/etrs-demo) | Attendance and timekeeping system for onsite and work-from-home records | [Live demo](https://etrs-demo.onrender.com/) | [GitHub](https://github.com/knnthcstrvl/etrs-demo) |
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Local setup
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Requirements
 
-## Agentic Development
+- PHP 8.3 or later
+- Composer
+- Node.js and npm
+- MySQL
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Install
+
+1. Install PHP dependencies:
+
+   ```bash
+   composer install
+   ```
+
+2. Create an environment file and generate the application key:
+
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+
+   On Windows PowerShell, use `Copy-Item .env.example .env` instead of `cp`.
+
+3. Create a MySQL database and update the `DB_*` values in `.env` to match your local configuration.
+
+4. Run migrations:
+
+   ```bash
+   php artisan migrate
+   ```
+
+5. Install frontend dependencies and start the development servers:
+
+   ```bash
+   npm install
+   composer run dev
+   ```
+
+The portfolio is served at the local URL shown by Laravel’s development server. To build frontend assets for production, run:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+npm run build
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Portfolio assets
 
-## Contributing
+- About portrait: `public/files/ken.jpg`
+- Résumé PDF: `public/files/Avila, Kenneth C. - Resume.pdf`
+- Project previews: `public/files/drms/preview.png`, `public/files/boardroom/preview.png`, and `public/files/etrs/preview.png`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Links
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- [GitHub profile](https://github.com/knnthcstrvl)

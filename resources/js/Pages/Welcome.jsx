@@ -116,7 +116,7 @@ export default function Welcome() {
 
     return (
         <div className={`portfolio ${dark ? 'theme-dark' : ''}`}>
-            <Head title="Kenneth Avila — Full Stack Developer">
+            <Head title="Portfolio">
                 <meta name="description" content="Kenneth Avila is a full stack developer building web experiences with Laravel, WordPress, and ASP.NET." />
             </Head>
 
