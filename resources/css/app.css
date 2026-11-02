@@ -40,6 +40,7 @@ section[id] { scroll-margin-top: 82px; }
 .desktop-nav { gap: clamp(20px, 2vw, 38px); margin-left: auto; font-size: 14px; color: var(--muted); }
 .desktop-nav a, .site-footer a { transition: color .2s; }
 .desktop-nav a:hover, .site-footer a:hover { color: var(--ink); }
+.mobile-menu-toggle { display: none; }
 .header-actions { gap: 14px; }
 .theme-toggle { width: 43px; height: 43px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; color: var(--ink); background: transparent; cursor: pointer; font-size: 22px; line-height: 1; transition: color .25s ease, border-color .25s ease, background-color .25s ease; }
 .theme-toggle-icon { display: block; transition: transform .3s ease; }
@@ -161,11 +162,18 @@ main > section:not(:last-child)::after { content: ''; position: absolute; left: 
 @media (max-width: 760px) {
     .site-header { height: 62px; padding: 0 18px; gap: 12px; }
     .monogram { width: 40px; height: 40px; }
-    .desktop-nav { gap: 14px; font-size: 12px; overflow-x: auto; }
-    .desktop-nav a:nth-child(3), .desktop-nav a:nth-child(4) { display: none; }
+    .desktop-nav { position: absolute; top: 62px; right: 0; left: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: 8px 18px 16px; border-bottom: 1px solid var(--line); background: var(--paper); box-shadow: 0 8px 14px rgb(0 0 0 / 8%); font-size: 15px; }
+    .desktop-nav.is-open { display: flex; }
+    .desktop-nav a { padding: 13px 4px; border-bottom: 1px solid var(--line); }
+    .desktop-nav a:last-child { border-bottom: 0; }
     .header-actions { gap: 8px; }
     .theme-toggle { width: 38px; height: 38px; }
     .resume-link { display: none; }
+    .mobile-menu-toggle { width: 40px; height: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; padding: 0; border: 1.5px solid var(--ink); border-radius: 9px; background: var(--surface); color: var(--ink); cursor: pointer; }
+    .mobile-menu-toggle span { width: 18px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+    .mobile-menu-toggle.is-open span:first-child { transform: translateY(7px) rotate(45deg); }
+    .mobile-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+    .mobile-menu-toggle.is-open span:last-child { transform: translateY(-7px) rotate(-45deg); }
     .portfolio { padding-top: 62px; }
     .site-header { position: fixed; }
     .hero { min-height: 710px; padding: 80px 25px 70px; }
