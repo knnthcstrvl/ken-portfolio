@@ -1,4 +1,4 @@
-import { Head } from '@inertiajs/react';
+﻿import { Head } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 
 const skills = [
@@ -10,7 +10,7 @@ const skills = [
 
 const experience = [
     {
-        company: 'Department of Agriculture — Bureau of Soils and Water Management',
+        company: 'Department of Agriculture â€” Bureau of Soils and Water Management',
         role: 'Computer Programmer III (COS)', date: '2026', type: 'Philippines',
         summary: 'Independently delivered two mission-critical ASP.NET web applications, taking them from requirements through deployment.',
         bullets: [
@@ -21,8 +21,8 @@ const experience = [
     },
     {
         company: 'Manila Central University',
-        role: 'System Programmer', date: '2023 — 2026', type: 'Hybrid · Philippines',
-        summary: 'Built and deployed web and mobile applications while supporting the university’s enterprise systems and users.',
+        role: 'System Programmer', date: '2023 â€” 2026', type: 'Hybrid Â· Philippines',
+        summary: 'Built and deployed web and mobile applications while supporting the universityâ€™s enterprise systems and users.',
         bullets: [
             'Developed full-stack web and cross-platform mobile apps independently with Laravel, WordPress, and Dart/Flutter.',
             'Administered Microsoft Entra ID, Office 365, and ERP systems, including user support through Microsoft Teams.',
@@ -34,7 +34,7 @@ const experience = [
     },
     {
         company: 'Atos Information Technology Inc.',
-        role: 'Service Desk Analyst', date: '2022 — 2023', type: 'Remote · North America & Australia',
+        role: 'Service Desk Analyst', date: '2022 â€” 2023', type: 'Remote Â· North America & Australia',
         summary: 'Provided remote level one support for enterprise clients across North America and Australia.',
         bullets: [
             'Resolved software and hardware issues and supported Office 365 administration, with a focus on Microsoft Teams.',
@@ -46,9 +46,9 @@ const experience = [
 ];
 
 const projects = [
-    { number: '01', type: 'Records management', title: 'DRMS — Digital Records Management System', description: 'A registrar records retrieval system for Manila Central University. DRMS helps Registrar staff search student records and retrieve digitized documents such as transcripts of records and Form 137. Staff can view, download, and print linked PDF files, while access activity is recorded for accountability. The digitized archive reaches back to 1904, MCU’s founding year.', stack: ['Laravel', 'Livewire', 'MySQL'], image: '/files/drms/preview.png', imageAlt: 'DRMS digital records management system preview', liveDemo: 'https://drms-demo.onrender.com/login', repository: 'https://github.com/knnthcstrvl/drms-demo' },
+    { number: '01', type: 'Records management', title: 'DRMS â€” Digital Records Management System', description: 'A registrar records retrieval system for Manila Central University. DRMS helps Registrar staff search student records and retrieve digitized documents such as transcripts of records and Form 137. Staff can view, download, and print linked PDF files, while access activity is recorded for accountability. The digitized archive reaches back to 1904, MCUâ€™s founding year.', stack: ['Laravel', 'Livewire', 'MySQL'], image: '/files/drms/preview.png', imageAlt: 'DRMS digital records management system preview', liveDemo: 'https://drms-demo.onrender.com/login', repository: 'https://github.com/knnthcstrvl/drms-demo' },
     { number: '02', type: 'Space reservation system', title: 'BoardRoom', description: 'A web-based reservation system for company spaces. Employees can check availability and request bookings through a tablet kiosk, while approvers manage requests in the admin panel.', stack: ['Laravel', 'React', 'MySQL', 'SQLite'], image: '/files/boardroom/preview.png', imageAlt: 'BoardRoom space reservation system preview', liveDemo: 'https://boardroom-demo.onrender.com/kiosk', repository: 'https://github.com/knnthcstrvl/boardroom-demo' },
-    { number: '03', type: 'Attendance & timekeeping', title: 'ETRS — Electronic Time Record System', description: 'A web-based attendance and timekeeping system that brings onsite biometric logs and work-from-home records together for HR review. It helps staff monitor attendance, manage exceptions, verify submissions, and export reports for payroll preparation.', stack: ['ASP.NET Core', 'Blazor', 'MySQL'], image: '/files/etrs/preview.png', imageAlt: 'ETRS electronic time record system preview', liveDemo: 'https://etrs-demo.onrender.com/', repository: 'https://github.com/knnthcstrvl/etrs-demo' },
+    { number: '03', type: 'Attendance & timekeeping', title: 'ETRS â€” Electronic Time Record System', description: 'A web-based attendance and timekeeping system that brings onsite biometric logs and work-from-home records together for HR review. It helps staff monitor attendance, manage exceptions, verify submissions, and export reports for payroll preparation.', stack: ['ASP.NET Core', 'Blazor', 'MySQL'], image: '/files/etrs/preview.png', imageAlt: 'ETRS electronic time record system preview', liveDemo: 'https://etrs-demo.onrender.com/', repository: 'https://github.com/knnthcstrvl/etrs-demo' },
 ];
 
 function SectionLabel({ children }) {
@@ -56,7 +56,7 @@ function SectionLabel({ children }) {
 }
 
 function Arrow({ diagonal = false }) {
-    return <span aria-hidden="true">{diagonal ? '↗' : '→'}</span>;
+    return <span aria-hidden="true">{diagonal ? 'â†—' : 'â†’'}</span>;
 }
 
 function PlaceholderLink({ children }) {
@@ -127,9 +127,9 @@ export default function Welcome() {
                 </nav>
                 <div className="header-actions flex items-center gap-3">
                     <button className="theme-toggle" type="button" onClick={() => setDark(!dark)} aria-label={`Switch to ${dark ? 'light' : 'dark'} theme`}>
-                        <span className={`theme-toggle-icon ${dark ? 'is-dark' : ''}`} aria-hidden="true">{dark ? '☾' : '☼'}</span>
+                        <span className={`theme-toggle-icon ${dark ? 'is-dark' : ''}`} aria-hidden="true">{dark ? 'â˜¾' : 'â˜¼'}</span>
                     </button>
-                    <a className="pill-button resume-link" href="/resume/download">Resume PDF <span aria-hidden="true">↓</span></a>
+                    <a className="pill-button resume-link" href="/resume/download">Resume PDF <span aria-hidden="true">â†“</span></a>
                 </div>
             </header>
 
@@ -150,16 +150,16 @@ export default function Welcome() {
                 <section className="about section-wrap" id="about">
                     <div className="section-heading" data-reveal>
                         <SectionLabel>ABOUT</SectionLabel>
-                        <h2>Hi, I’m Kenneth.</h2>
+                        <h2>Hi, Iâ€™m Kenneth.</h2>
                     </div>
                     <div className="about-body grid grid-cols-1 gap-8 md:grid-cols-2" data-reveal>
                         <div className="about-portrait"><img src="/files/ken.jpg" alt="Kenneth Avila" /></div>
                         <div className="about-copy">
-                            <p className="about-lead">I’m a full-stack software engineer and Magna Cum Laude IT graduate with 3.5 years of experience building and deploying web and mobile applications.</p>
-                            <p>My experience spans the full software lifecycle: gathering requirements, building and deploying applications, administering business systems, and supporting the people who use them. I’ve developed web and mobile products with Laravel, ASP.NET, WordPress, and Flutter, and supported university and enterprise environments across hybrid and remote teams.</p>
+                            <p className="about-lead">Iâ€™m a full-stack software engineer and Magna Cum Laude IT graduate with 3.5 years of experience building and deploying web and mobile applications.</p>
+                            <p>My experience spans the full software lifecycle: gathering requirements, building and deploying applications, administering business systems, and supporting the people who use them. Iâ€™ve developed web and mobile products with Laravel, ASP.NET, WordPress, and Flutter, and supported university and enterprise environments across hybrid and remote teams.</p>
                             <p>I also bring hands-on experience with Microsoft Entra ID, Office 365, ERP administration, PowerShell automation, SQL Server, MySQL, Linux, Windows Server, and IIS. I value clear documentation, thoughtful handovers, and taking ownership from the first conversation through production support.</p>
-                            <p className="muted-copy">B.S. Information Technology · Manila Central University · Magna Cum Laude · 2018–2022</p>
-                            <p className="muted-copy">Malabon City, Philippines · Open to remote opportunities.</p>
+                            <p className="muted-copy">B.S. Information Technology Â· Manila Central University Â· Magna Cum Laude Â· 2018â€“2022</p>
+                            <p className="muted-copy">Malabon City, Philippines Â· Open to remote opportunities.</p>
                             <div className="social-links"><a className="pill-button" href="https://github.com/knnthcstrvl" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a></div>
                         </div>
                     </div>
@@ -182,13 +182,13 @@ export default function Welcome() {
                     <div className="experience-sidebar">
                         <div className="section-heading" data-reveal>
                             <SectionLabel>EXPERIENCE</SectionLabel>
-                            <h2>Where I’ve been</h2>
+                            <h2>Where Iâ€™ve been</h2>
                             <p className="section-intro">Building software, supporting users, and improving the systems teams depend on.</p>
                         </div>
                         <nav className="experience-list" aria-label="Jump to an experience">
                             {experience.map((job, index) => <button className={`experience-tab ${activeExperience === index ? 'is-active' : ''}`} type="button" aria-pressed={activeExperience === index} aria-controls="experience-detail" key={job.company} onClick={() => focusExperience(index)}>
                                 <span className="experience-marker" />
-                                <span>{job.company}<small>{job.role} · {job.date}</small></span>
+                                <span>{job.company}<small>{job.role} Â· {job.date}</small></span>
                             </button>)}
                         </nav>
                     </div>
@@ -208,7 +208,7 @@ export default function Welcome() {
                     <div className="section-heading" data-reveal>
                         <SectionLabel>SELECTED PROJECTS</SectionLabel>
                         <h2>Projects worth opening</h2>
-                        <p className="section-intro">A selection of systems and applications I’ve built.</p>
+                        <p className="section-intro">A selection of systems and applications Iâ€™ve built.</p>
                     </div>
                     <div className="project-list grid gap-12">
                         {projects.map((project, index) => <article className={`project-row grid grid-cols-1 items-center gap-8 md:grid-cols-2 ${index % 2 ? 'project-reverse' : ''}`} key={project.number} data-reveal data-reveal-delay={index % 2 ? '1' : '0'}>
@@ -233,17 +233,17 @@ export default function Welcome() {
                 <section className="contact-section" id="contact">
                     <div className="section-wrap contact-inner" data-reveal>
                         <SectionLabel>CONTACT</SectionLabel>
-                        <h2>Let’s build<br />something useful.</h2>
+                        <h2>Letâ€™s build<br />something useful.</h2>
                         <p>Open to remote opportunities and interesting projects. Feel free to get in touch.</p>
                         <a className="contact-email" href="mailto:knnthcstrvl@gmail.com">knnthcstrvl@gmail.com</a>
                         <a className="contact-phone" href="tel:+639567919152">+63 956 791 9152</a>
-                        <div className="social-links"><a className="pill-button" href="https://github.com/knnthcstrvl" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a><a className="pill-button" href="/resume/download">Download résumé <span aria-hidden="true">↓</span></a></div>
+                        <div className="social-links"><a className="pill-button" href="https://github.com/knnthcstrvl" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a><a className="pill-button" href="/resume/download">Download rÃ©sumÃ© <span aria-hidden="true">â†“</span></a></div>
                     </div>
                 </section>
             </main>
 
-            <a href="#home" className={`back-to-top ${showBackToTop ? 'is-visible' : ''}`} aria-label="Back to top" aria-hidden={!showBackToTop} tabIndex={showBackToTop ? 0 : -1}>↑</a>
-            <footer className="site-footer" data-reveal><span>© {new Date().getFullYear()} Kenneth Avila</span></footer>
+            <a href="#home" className={`back-to-top ${showBackToTop ? 'is-visible' : ''}`} aria-label="Back to top" aria-hidden={!showBackToTop} tabIndex={showBackToTop ? 0 : -1}>â†‘</a>
+            <footer className="site-footer" data-reveal><span>Â© {new Date().getFullYear()} Kenneth Avila</span></footer>
         </div>
     );
 }
