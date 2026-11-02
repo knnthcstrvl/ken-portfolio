@@ -127,7 +127,7 @@ export default function Welcome() {
                 </nav>
                 <div className="header-actions flex items-center gap-3">
                     <button className="theme-toggle" type="button" onClick={() => setDark(!dark)} aria-label={`Switch to ${dark ? 'light' : 'dark'} theme`}>
-                        {dark ? '☾' : '☼'}
+                        <span className={`theme-toggle-icon ${dark ? 'is-dark' : ''}`} aria-hidden="true">{dark ? '☾' : '☼'}</span>
                     </button>
                     <a className="pill-button resume-link" href="/resume/download">Resume PDF <span aria-hidden="true">↓</span></a>
                 </div>

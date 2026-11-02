@@ -41,7 +41,9 @@ section[id] { scroll-margin-top: 82px; }
 .desktop-nav a, .site-footer a { transition: color .2s; }
 .desktop-nav a:hover, .site-footer a:hover { color: var(--ink); }
 .header-actions { gap: 14px; }
-.theme-toggle { width: 43px; height: 43px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; color: var(--ink); background: transparent; cursor: pointer; font-size: 22px; line-height: 1; }
+.theme-toggle { width: 43px; height: 43px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; color: var(--ink); background: transparent; cursor: pointer; font-size: 22px; line-height: 1; transition: color .25s ease, border-color .25s ease, background-color .25s ease; }
+.theme-toggle-icon { display: block; transition: transform .3s ease; }
+.theme-toggle-icon.is-dark { transform: rotate(180deg); }
 .pill-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 42px; padding: 0 18px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--surface); box-shadow: 2px 3px 0 var(--ink); font-size: 14px; white-space: nowrap; transition: transform .2s, box-shadow .2s, background .2s; }
 .pill-button:hover { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
 .resume-link { min-height: 42px; }
